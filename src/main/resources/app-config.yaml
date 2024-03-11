@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:${DB_BASE}://${DB_SERVER}:${DB_PORT}/${DB_NAME}?characterEncoding=UTF-8&useUnicode=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"
+    username: ${DB_USERNAME}
+    password: ${DB_PASS}
+  ##for env DB_BASE=postgresql;DB_NAME=jiraRush;DB_PASS=root;DB_PORT=5432;DB_SERVER=localhost;DB_USERNAME=postgres;github_id=3d0d8738e65881fff266;github_secret=0f97031ce6178b7dfb67a6af587f37e222a16120;gitlab_id=b8520a3266089063c0d8261cce36971defa513f5ffd9f9b7a3d16728fc83a494;gitlab_secret=e72c65320cf9d6495984a37b0f9cc03ec46be0bb6f071feaebbfe75168117004;google_id=329113642700-f8if6pu68j2repq3ef6umd5jgiliup60.apps.googleusercontent.com;google_secret=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;mail_password=zdfzsrqvgimldzyj;mail_username=jira4jr@gmail.com
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ${github_id}
+            client-secret: ${github_secret}
+          google:
+            client-id: ${google_id}
+            client-secret: ${google_secret}
+          gitlab:
+            client-id: ${gitlab_id}
+            client-secret: ${gitlab_secret}
+
+  mail:
+    username: ${mail_username}
+    password: ${mail_password}
